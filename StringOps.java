@@ -22,8 +22,6 @@ public class StringOps {
     ////// ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        String sting = "hello World";
-        System.out.println(camelCase(sting));
 
     }
 
