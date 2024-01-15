@@ -54,9 +54,8 @@ public class StringOps {
     }
 
     public static String camelCase(String string) {
-        int i = 0;
-        for (int i = 0; i <= n;)
-            return "";
+
+        return "";
     }
 
     public static int[] allIndexOf(String string, char chr) {
