@@ -22,7 +22,6 @@ public class StringOps {
     ////// ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        System.out.println(capVowelsLowRest("I Love You"));
 
     }
 
@@ -54,8 +53,8 @@ public class StringOps {
     }
 
     public static String camelCase(String string) {
-
         return "";
+
     }
 
     public static int[] allIndexOf(String string, char chr) {
