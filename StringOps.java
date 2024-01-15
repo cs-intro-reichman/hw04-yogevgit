@@ -22,6 +22,8 @@ public class StringOps {
     ////// ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
+        String sting = "hello World";
+        System.out.println(camelCase(sting));
 
     }
 
@@ -52,8 +54,38 @@ public class StringOps {
         return renewstr;
     }
 
-    public static String camelCase(String string) {
-        return "";
+    public static String camelCase(String str) {
+        String str1 = str;
+        String newstr = "";
+        int count = 0;
+        for (int i = 0; ((i < str1.length()) && (((char) (str1.charAt(i))) == ' ')); i++) {
+            count++;
+        }
+        str1 = str1.substring(count);
+        count = 0;
+
+        for (int i = 0; ((i < str1.length()) && (((char) (str1.charAt(i))) != ' ')); i++) {
+            if ((65 <= ((int) (str1.charAt(i)))) && (((int) (str1.charAt(i))) <= 90)) {
+                newstr = newstr + ((char) (str1.charAt(i) + 32));
+            } else
+                newstr = newstr + ((char) (str1.charAt(i)));
+            count++;
+        }
+        str1 = str1.substring(count);
+        for (int i = 1; i < str1.length(); i++) {
+            if (str1.charAt(i - 1) == ' ' && ((97 <= ((int) (str1.charAt(i)))) && (((int) (str1.charAt(i))) <= 122)))
+                newstr = newstr + ((char) (str1.charAt(i) - 32));
+            else if (str1.charAt(i - 1) == ' '
+                    && ((65 <= ((int) (str1.charAt(i)))) && (((int) (str1.charAt(i))) <= 90)))
+                newstr = newstr + ((char) (str1.charAt(i)));
+            else if (str1.charAt(i) == ' ')
+                continue;
+            else if ((65 <= ((int) (str1.charAt(i)))) && (((int) (str1.charAt(i))) <= 90)) {
+                newstr = newstr + ((char) (str1.charAt(i) + 32));
+            } else
+                newstr = newstr + ((char) (str1.charAt(i)));
+        }
+        return newstr;
 
     }
 
