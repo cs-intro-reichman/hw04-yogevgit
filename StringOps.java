@@ -42,21 +42,23 @@ public class StringOps {
             } else
                 newstr = newstr + ((char) (str.charAt(i)));
         }
-        for (int i = 0; i < newstr.length(); i++) {
-            if (newstr.charAt(i) == 'a')
-                renewstr = renewstr + ((char) (newstr.charAt(i) - 32));
-            else if (newstr.charAt(i) == 'e')
-                renewstr = renewstr + ((char) (newstr.charAt(i) - 32));
-            else if (newstr.charAt(i) == 'i')
-                renewstr = renewstr + ((char) (newstr.charAt(i) - 32));
-            else if (newstr.charAt(i) == 'o')
-                renewstr = renewstr + ((char) (newstr.charAt(i) - 32));
-            else if (newstr.charAt(i) == 'u')
-                renewstr = renewstr + ((char) (newstr.charAt(i) - 32));
-            else
-                renewstr = renewstr + newstr.charAt(i);
-        }
-        return renewstr;
+        /*
+         * for (int i = 0; i < newstr.length(); i++) {
+         * if (newstr.charAt(i) == 'a')
+         * renewstr = renewstr + ((char) (newstr.charAt(i) - 32));
+         * else if (newstr.charAt(i) == 'e')
+         * renewstr = renewstr + ((char) (newstr.charAt(i) - 32));
+         * else if (newstr.charAt(i) == 'i')
+         * renewstr = renewstr + ((char) (newstr.charAt(i) - 32));
+         * else if (newstr.charAt(i) == 'o')
+         * renewstr = renewstr + ((char) (newstr.charAt(i) - 32));
+         * else if (newstr.charAt(i) == 'u')
+         * renewstr = renewstr + ((char) (newstr.charAt(i) - 32));
+         * else
+         * renewstr = renewstr + newstr.charAt(i);
+         * }
+         */
+        return newstr;
     }
 
     public static String camelCase(String str) {
