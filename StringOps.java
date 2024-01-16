@@ -22,6 +22,10 @@ public class StringOps {
     ////// ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
+        String sting = "Hello World";
+        System.out.println(camelCase(sting));
+        System.out.println(camelCase(sting));
+        System.out.println(allIndexOf(sting, 'l'));
 
     }
 
@@ -87,8 +91,22 @@ public class StringOps {
 
     }
 
-    public static int[] allIndexOf(String string, char chr) {
-        // Write your code here:
-        return new int[1];
+    public static int[] allIndexOf(String str, char chr) {
+        int arraycount = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == chr)
+                arraycount++;
+        }
+
+        int[] arr = new int[arraycount];
+        arraycount = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == chr) {
+                arr[arraycount] = i;
+                arraycount++;
+            }
+        }
+        return arr;
+
     }
 }
