@@ -22,11 +22,14 @@ public class StringOps {
     ////// ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        String sting = "Hello World";
+        String sting = " Hello World";
+        System.out.println(capVowelsLowRest(sting));
         System.out.println(camelCase(sting));
-        System.out.println(camelCase(sting));
-        System.out.println(allIndexOf(sting, 'l'));
+        int[] arr = allIndexOf(sting, 'l');
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
 
+        }
     }
 
     public static String capVowelsLowRest(String str) {
