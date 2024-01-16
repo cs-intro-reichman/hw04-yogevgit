@@ -6,6 +6,7 @@ public class TesterStringOps {
         if (args.length != 2) {
             System.out.println("Usage: java TesterStringOps <function_name> <input_number>");
             return;
+
         }
 
         String functionName = args[0];
@@ -63,18 +64,18 @@ public class TesterStringOps {
                 "MMMM",
                 // Add more test cases as needed
         };
-        char[] characters = {'l', 'l', 'o', ' ', 'M', 'M'};
-    
+        char[] characters = { 'l', 'l', 'o', ' ', 'M', 'M' };
+
         int[][] expectedResults = {
-                {2, 3, 9},
-                {2, 3},
-                {4, 7},
-                {5},
-                {0, 1, 2, 3}
+                { 2, 3, 9 },
+                { 2, 3 },
+                { 4, 7 },
+                { 5 },
+                { 0, 1, 2, 3 }
         };
-    
+
         int[] result = StringOps.allIndexOf(strings[inputNumber - 1], characters[inputNumber - 1]);
-    
+
         System.out.println(Arrays.toString(result));
     }
 }
