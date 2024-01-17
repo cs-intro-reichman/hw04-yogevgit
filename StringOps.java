@@ -29,8 +29,9 @@ public class StringOps {
         // Write your code here:
         String newstr = "";
         String renewstr = "";
+
         for (int i = 0; i < str.length(); i++) {
-            if (('A' <= (str.charAt(i))) && ((str.charAt(i)) <= 'Z')) {
+            if ((65 <= ((int) (str.charAt(i)))) && (((int) (str.charAt(i))) <= 90)) {
                 newstr = newstr + ((char) (str.charAt(i) + 32));
             } else
                 newstr = newstr + ((char) (str.charAt(i)));
