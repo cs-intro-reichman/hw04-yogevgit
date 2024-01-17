@@ -22,6 +22,13 @@ public class StringOps {
     ////// ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
+        String sting = "One two tHRee world";
+        System.out.println(capVowelsLowRest(sting));
+        System.out.println(camelCase(sting));
+        int[] arr = allIndexOf(sting, 'o');
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
 
     }
 
