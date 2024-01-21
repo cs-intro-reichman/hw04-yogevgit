@@ -15,6 +15,7 @@ public class ArrayOps {
         for (int i = 0; i < array.length; i++) {
             count = count + array[i];
         }
+        // #feedback - you can return the calculation directly instead of assigning it to the missingInt variable.
         missingInt = ((array.length) * (array.length + 1)) / 2 - count;
         return missingInt;
 
