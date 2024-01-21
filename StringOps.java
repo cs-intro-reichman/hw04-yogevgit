@@ -38,12 +38,14 @@ public class StringOps {
         String renewstr = "";
 
         for (int i = 0; i < str.length(); i++) {
+            // #feedback - it is usually better to use the actual characters, e.g. 'a', instead of their number representations.
             if ((65 <= ((int) (str.charAt(i)))) && (((int) (str.charAt(i))) <= 90)) {
                 newstr = newstr + ((char) (str.charAt(i) + 32));
             } else
                 newstr = newstr + ((char) (str.charAt(i)));
         }
         for (int i = 0; i < newstr.length(); i++) {
+            // #feedback - there is some code repetition here , you can have the shared code in a helper function, or combine all conditions into one.
             if (newstr.charAt(i) == 'a')
                 renewstr = renewstr + ((char) (newstr.charAt(i) - 32));
             else if (newstr.charAt(i) == 'e')
@@ -61,6 +63,8 @@ public class StringOps {
     }
 
     public static String camelCase(String str) {
+        // #feedback - this is a long function, consider using some helper functions. Also, you can have a single loop here, and iterate on the string once.
+        // You can check each character and do the operation needed on it. If you find a space, remove it and update a boolean variable to make the next letter upper case.
         String str1 = str;
         String newstr = "";
         int count = 0;
